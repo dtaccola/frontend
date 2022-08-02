@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <title>Prática de Objetos</title>
+</head>
+<body>
+    <script>
+        // um objeto pode ter como atributo uma função, essa função pode receber como parâmetro um outro objeto
+        function Pessoa(){
+            this.nome = "Daniel"
+            this.idade = 36
+            this.printNome = function(){
+                console.log(this.nome)
+            }
+            this.returnAnimal = function(animal){
+                return animal;
+            }
+        }
+
+        var pessoa = new Pessoa();
+        // pessoa.printNome();        
+
+        function Animal(nome, peso, raca){
+            if(nome == undefined){
+                nome = 'Cachorro';
+            }
+
+            if(peso == undefined){
+                peso = '10kg';
+            }
+
+            if(raca == undefined){
+                raca = 'Pastor Alemão';
+            }
+            this.nome = nome
+            this.peso = peso
+            this.raca = raca
+        }
+
+        // animal = new Animal("Gato", "5kg");
+        animal = new Animal();
+        // animal.raca = 'Rottweiller';
+        // console.log(animal.nome);
+        // console.log(animal.peso);
+
+        console.log(animal);
+        console.log(pessoa.returnAnimal(animal).raca);
+
+
+
+
+
+
+
+
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+    <body>
+        <style>
+            /* animação ex 1 */
+                .box{
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    margin-left: 0;
+                    transition: 2s;
+                }
+                .animEsquerda{
+                    transition: 2s;                
+                    background-color: black;
+                }
+            /* animacao ex 1 */
+
+
+
+
+
+
+
+
+            /* animacao ex 2 */
+                .conteudo h2 span{
+                    font-size: 13px;
+                    cursor: pointer;
+                }
+
+                .conteudo p {
+                    overflow: hidden;
+                    height: 10px;
+                    transition: 1s;
+                }
+                .mostrar{
+                    height: 200px !important;
+                }
+
+            /* animacao ex 2 */
+        </style>
+        <!-- animacao ex 1  -->
+            <div class="box"></div>
+        <!-- animacao ex 1  -->
+
+        <!-- anicamao ex 2 -->
+            <div class="conteudo">
+                <h2>Título do conteúdo <span>Ver mais!</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+            <div class="conteudo">
+                <h2>Título do conteúdo <span>Ver mais!</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+            <div class="conteudo">
+                <h2>Título do conteúdo <span>Ver mais!</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+            <div class="conteudo">
+                <h2>Título do conteúdo <span>Ver mais!</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+        <!-- anicamao ex 2 -->
+
+        <script>
+            // animacao ex 1
+                var box = document.querySelectorAll('.box')[0];
+                // aplicar a classe da animação depois de um timeout
+                setTimeout(()=>{
+                    box.classList.add('animEsquerda');
+                },2000);
+
+                // aplica a classe da animação no click
+                box.addEventListener('click', ()=>{
+                    box.classList.remove('animEsquerda');
+                });
+            // animacao ex 1
+
+            // animacao ex 2
+                var span = document.querySelectorAll('.conteudo span')[0];
+                console.log('sp', span);
+                span.addEventListener('click', function(){
+                    var conteudo = document.querySelectorAll('.conteudo p')[0]; 
+                    console.log('cont', conteudo);
+                    if(conteudo.classList.contains('mostrar')){
+                        span.innerHTML = 'He he hey';
+                        conteudo.classList.remove('mostrar');
+                    }else{
+                        span.innerHTML = 'Lindo dia';
+                        conteudo.classList.add('mostrar');
+                        // alert('hehehey');
+                    }
+                });
+            // animacao ex 2
+        </script>
+    </body>
+</html>

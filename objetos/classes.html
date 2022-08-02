@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <script>
+            class Animal{
+                constructor(nome){
+                    this.nome = nome;
+                }
+
+                printNome(){
+                    return this.nome;
+                }
+            }
+
+            gato = new Animal('Gato');
+            // cachorro = new Animal('Cachorro');
+            // console.log(gato);
+            // console.log(cachorro.printNome());
+
+            class Cachorro extends Animal{
+                constructor(nome){
+                    // o super invoca o construtor da classe pai
+                    super(nome);
+                    this.raca = "Collie";
+                }
+
+                printRaca(){
+                    return this.raca;
+                }
+            }
+
+            cachorro = new Cachorro({
+                "nome": "Bob",
+                "raca": "Doberman"
+            });
+            // console.log(cachorro.printRaca());
+            // console.log(cachorro.printNome());
+            console.log(cachorro);
+
+        </script>
+    </body>
+</html>

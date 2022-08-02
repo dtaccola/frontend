@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DECLARAR VARIÁVEIS */
+:root{
+    --mainColor: #baf1ad;
+}
+
+body{
+    background-color: var(--mainColor);
+}
+
+/* FORMULARIO E INPUTS */
+.form{
+    text-align: center;
+    padding: 20px;
+}
+
+.form img{
+    max-width: 300px;
+    width: 100%;
+}
+
+.form input[type=text],
+.form input[type=email]{
+    display: block;
+
+    font-size: 16px;
+
+    padding-left: 10px;
+    margin: 10px auto;
+
+    max-width: 500px;
+    width: 100%;
+    height: 35px;
+
+    border: 1px solid rgb(22, 22, 20);
+    border-radius: 20px;
+}
+
+.form textarea{
+    padding: 10px;
+    resize: vertical;
+    display: block;
+    border-radius: 20px;
+    margin: 10px auto;
+    font-size: 16px;
+    max-width: 500px;
+    width: 100%;
+    height: 120px;
+}
+
+.form input[type=submit]{
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+
+    color: #fff;
+    background-color: rgb(24, 155, 57);
+    text-align: center;
+    margin: 10px auto;
+
+    max-width: 500px;
+    width: 15%;
+    height: 35px;
+
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 20px;
+}
+
+.form input[type=submit]:hover{
+    background-color: #8d330f;
+}
+
+
+
+
+/* ANIMATION */
+/* @keyframes animate{
+    from{background-color: red;width: 250px;} 
+    to{background-color: green;width: 1px;}   
+    0% {background-color: red;}
+    50% {background-color: yellow;}
+    100% {background-color: green;}
+}  */
+
+.div-1{
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    /* animation-fill-mode: both; */
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+.div-2{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}
+
+
+
+

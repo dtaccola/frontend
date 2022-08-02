@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <script>
+            // // traz a data atual completa
+            // var date = new Date();
+            // console.log(date);
+
+            // // traz o dia do mês
+            // console.log(date.getDate());
+
+            // // traz o dia da semana
+            // console.log(date.getDay());
+
+            // // traz o ano 
+            // console.log(date.getFullYear());
+
+            // // traz a hora
+            // console.log(date.getHours());
+
+            // // traz os minutos
+            // console.log(date.getMinutes());
+
+            // // traz os milisegundos
+            // console.log(date.getTime());
+
+            var date = new Date('04/24/2022');
+            // console.log(date.getTime());
+
+            var date_2 = new Date('04/30/2022');
+
+            // calcular a data e converter os milisegundos em dias
+            // 1000 = 1 segundo
+            // 3600 = 1 hora
+            // 24 = 1 dia
+            var diferenca = (date_2.getTime() - date.getTime()) / (1000 * 3600 * 24);
+            console.log(diferenca);
+
+        </script>
+    </body>
+</html>

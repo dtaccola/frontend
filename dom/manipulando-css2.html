@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <div class="testes">
+            <div class="inside-testes">Texto</div>
+        </div>
+
+        <div class="testes">
+            <div class="inside-testes">Texto 2</div>
+        </div>
+
+        <script>
+            // seleciona todos os elementos dos atributos especificados
+            var els = document.querySelectorAll('.testes', '.inside-testes');
+            // console.log(els);
+            els[0].style.color = 'red';
+            els[1].innerHTML = 'gerado pelo JS';
+        </script>
+    </body>
+</html>

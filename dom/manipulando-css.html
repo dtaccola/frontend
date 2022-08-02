@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <div id="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        
+        <script>
+            // pega um elemento pelo seu id
+            var el = document.getElementById('box');
+            // estiliza o elemento
+            // el.style.width = 100;
+            // el.style.height = 100;
+            // el.style.backgroundColor = 'green';
+
+            // pega todos os elementos de uma classe
+            var elementos = document.getElementsByClassName('box');
+            // console.log(elementos);
+
+            // percorre todos os elementos, aplicando os estilos à cada um deles
+            for(var i = 0; i < elementos.length; i++){
+                var el = elementos[i];
+
+                el.style.width = 100;
+                el.style.height = 100;
+                el.style.backgroundColor = 'green';
+                el.style.margin = '1px';
+                el.style.borderRadius = '1px';
+                el.style.border = '1px solid';
+                el.style.borderColor = 'red';
+            }
+        </script>    
+    </body>
+</html>
